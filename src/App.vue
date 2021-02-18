@@ -8,6 +8,8 @@
 
 <script>
 import axios from "axios";
+const axios = require('axios');
+
 export default {
   data () {
     return {
@@ -16,14 +18,10 @@ export default {
     };
   },
   methods:{
-  async created() {
-      await axios.get(
-      `https://apis.postcode-jp.com/api/v4/postcodes/string?string=yO7TZrzN6bwf5fryzBCn5dXB7Llq4JhTtL0DnaH`
-    );
-    },
-  sendPost() {
-    this.getNumber = this.show
-   }
-  },
-}
+  sendPost() { 
+  　const response = await 
+    axios.get(`https://apis.postcode-jp.com/api/v4/postcodes/0123456?true=yO7TZrzN6bwf5fryzBCn5dXB7Llq4JhTtL0DnaH`);
+  }
+  }
+};
 </script>
