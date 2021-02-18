@@ -20,7 +20,8 @@ export default {
   methods:{
   sendPost() { 
   　const response = await 
-    axios.get(`https://apis.postcode-jp.com/api/v4/postcodes/0123456?true=yO7TZrzN6bwf5fryzBCn5dXB7Llq4JhTtL0DnaH`);
+    axios.get(`https://apis.postcode-jp.com/api/v4/postcodes/0123456?apiKey=yO7TZrzN6bwf5fryzBCn5dXB7Llq4JhTtL0DnaH`);
+    console.log(response);
   }
   }
 };
