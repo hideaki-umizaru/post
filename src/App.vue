@@ -18,16 +18,13 @@ export default {
   },
   methods: {
     sendPost() {
-      const response = await;
-      axios
-        .get(
-          `https://apis.postcode-jp.com/api/v4/postcodes/0123456?apiKey=yO7TZrzN6bwf5fryzBCn5dXB7Llq4JhTtL0DnaH` +
-            this.getNumber
-        )
+      axios.get(
+          `https://apis.postcode-jp.com/api/v4/postcodes/${this.getNumber}?apiKey=yO7TZrzN6bwf5fryzBCn5dXB7Llq4JhTtL0DnaH` +
+            this.getNumber)
         .then((res) => {
           this.show = res.data;
         });
-      console.log(response);
+      console.log(res);
     },
   },
 };
